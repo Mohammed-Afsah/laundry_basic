@@ -39,23 +39,23 @@ class _HomeScreenState extends State<HomeScreen>
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color(0xFF0083F5),
+        backgroundColor: const Color(0xFF0083F5),
         actions: [
           GestureDetector(
             onTap: () {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => CartScreen(),
+                  builder: (context) => const CartScreen(),
                 ),
               );
             },
             child: CircleAvatar(
-              backgroundColor: Color(0xFFD9EDFF),
+              backgroundColor: const Color(0xFFD9EDFF),
               child: Stack(
                 clipBehavior: Clip.none,
                 children: [
-                  Image(
+                  const Image(
                     image: AssetImage('assets/images/Vector.png'),
                     height: 45,
                     width: 30,
@@ -65,18 +65,18 @@ class _HomeScreenState extends State<HomeScreen>
                       right: 0,
                       top: 0,
                       child: Container(
-                        padding: EdgeInsets.all(5),
-                        decoration: BoxDecoration(
+                        padding: const EdgeInsets.all(5),
+                        decoration: const BoxDecoration(
                           color: Color(0xFFFFFFFF),
                           shape: BoxShape.circle,
                         ),
-                        constraints: BoxConstraints(
+                        constraints: const BoxConstraints(
                           minWidth: 6,
                           minHeight: 6,
                         ),
                         child: Text(
                           cartCount.toString(),
-                          style: TextStyle(
+                          style: const TextStyle(
                             color: Color(0xFF0083F5),
                             fontSize: 8,
                             fontWeight: FontWeight.bold,
@@ -89,11 +89,11 @@ class _HomeScreenState extends State<HomeScreen>
               ),
             ),
           ),
-          SizedBox(width: 10.0),
-          CircleAvatar(
+          const SizedBox(width: 10.0),
+          const CircleAvatar(
             backgroundImage: AssetImage('assets/images/profileimage.png'),
           ),
-          SizedBox(width: 10.0),
+          const SizedBox(width: 10.0),
         ],
       ),
       drawer: Drawer(
@@ -112,7 +112,7 @@ class _HomeScreenState extends State<HomeScreen>
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => Enquiryform(),
+                    builder: (context) => const Enquiryform(),
                   ),
                 );
               },
@@ -123,7 +123,7 @@ class _HomeScreenState extends State<HomeScreen>
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => LandingPage(),
+                    builder: (context) => const LandingPage(),
                   ),
                 );
               },
@@ -131,19 +131,19 @@ class _HomeScreenState extends State<HomeScreen>
           ],
         ),
       ),
-      backgroundColor: Color(0xFF0083F5),
+      backgroundColor: const Color(0xFF0083F5),
       body: Column(
         children: [
           // Search TextField at the top
           Container(
-            margin: EdgeInsets.all(15.0),
+            margin: const EdgeInsets.all(15.0),
             child: TextField(
               decoration: InputDecoration(
-                prefixIcon: Icon(Icons.search_outlined),
+                prefixIcon: const Icon(Icons.search_outlined),
                 labelText: 'Search products',
                 filled: true,
                 isDense: true,
-                fillColor: Color(0xFFFFFFFF),
+                fillColor: const Color(0xFFFFFFFF),
                 border: UnderlineInputBorder(
                   borderRadius: BorderRadius.circular(10.0),
                 ),
@@ -153,39 +153,39 @@ class _HomeScreenState extends State<HomeScreen>
 
           // Place the TabBar below the TextField
           Container(
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(39.0),
                   topRight: Radius.circular(39.0),
                 ),
                 color: Color(0xFFFFFFFF),
               ),
-              padding: EdgeInsets.only(top: 14),
+              padding: const EdgeInsets.only(top: 14),
               child: TabBar(
-                unselectedLabelColor: Color(0xFFFFFFFF),
-                labelColor: Color(0xFF0083F5),
+                unselectedLabelColor: const Color(0xFFFFFFFF),
+                labelColor: const Color(0xFF0083F5),
                 isScrollable: true,
-                indicator: BoxDecoration(),
-                dividerColor: Color(0xFFFFFFFF),
+                indicator: const BoxDecoration(),
+                dividerColor: const Color(0xFFFFFFFF),
                 controller: _tabController,
                 tabs: [
                   Container(
                     decoration: BoxDecoration(
                         color: _tabController.index == 0
-                            ? Color(0xFF0083F5)
-                            : Color(0xFFFFFFFF),
-                        border: Border.all(color: Color(0xFF0083F5)),
+                            ? const Color(0xFF0083F5)
+                            : const Color(0xFFFFFFFF),
+                        border: Border.all(color: const Color(0xFF0083F5)),
                         borderRadius: BorderRadius.circular(6.0),
                     ),
-                    padding: EdgeInsets.only(left: 48.0,right: 48.0,top: 8.0,bottom: 8.0),
-                    margin: EdgeInsets.only(left: 5.0),
+                    padding: const EdgeInsets.only(left: 48.0,right: 48.0,top: 8.0,bottom: 8.0),
+                    margin: const EdgeInsets.only(left: 5.0),
                     child: Center(
                       child: Text(
                         'Pick',
                         style: TextStyle(
                           color: _tabController.index == 0
-                              ? Color(0xFFFFFFFF)
-                              : Color(0xFF0083F5),
+                              ? const Color(0xFFFFFFFF)
+                              : const Color(0xFF0083F5),
                           fontSize: 14,
                         ),
                       ),
@@ -194,18 +194,18 @@ class _HomeScreenState extends State<HomeScreen>
                   Container(
                     decoration: BoxDecoration(
                         color: _tabController.index == 1
-                            ? Color(0xFF0083F5)
-                            : Color(0xFFFFFFFF),
-                        border: Border.all(color: Color(0xFF0083F5)),
+                            ? const Color(0xFF0083F5)
+                            : const Color(0xFFFFFFFF),
+                        border: Border.all(color: const Color(0xFF0083F5)),
                         borderRadius: BorderRadius.circular(6.0)),
-                    padding: EdgeInsets.only(left: 48.0,right: 48.0,top: 8.0,bottom: 8.0),
+                    padding: const EdgeInsets.only(left: 48.0,right: 48.0,top: 8.0,bottom: 8.0),
                     child: Center(
                       child: Text(
                         'Drop',
                         style: TextStyle(
                           color: _tabController.index == 1
-                              ? Color(0xFFFFFFFF)
-                              : Color(0xFF0083F5),
+                              ? const Color(0xFFFFFFFF)
+                              : const Color(0xFF0083F5),
                           fontSize: 14,
                         ),
                       ),
@@ -218,7 +218,7 @@ class _HomeScreenState extends State<HomeScreen>
           Expanded(
             child: TabBarView(
               controller: _tabController,
-              children: [
+              children: const [
                 PickProduct(), // Displayed when "Pick" tab is selected
                 DropProduct(), // Displayed when "Drop" tab is selected
               ],
@@ -237,12 +237,12 @@ class PickProduct extends StatelessWidget {
   Widget build(BuildContext context) {
     return Expanded(
       child: Container(
-        padding: EdgeInsets.only(top: 24.0),
-        color: Color(0xFFFFFFFF),
+        padding: const EdgeInsets.only(top: 24.0),
+        color: const Color(0xFFFFFFFF),
         width: double.infinity,
         child: GridView.builder(
-            padding: EdgeInsets.only(left: 15.0, right: 15.0),
-            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+            padding: const EdgeInsets.only(left: 15.0, right: 15.0),
+            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 2,
               crossAxisSpacing: 10,
               mainAxisSpacing: 10,
@@ -264,11 +264,11 @@ class DropProduct extends StatelessWidget {
   Widget build(BuildContext context) {
     return Expanded(
       child: Container(
-        color: Color(0xFFFFFFFF),
+        color: const Color(0xFFFFFFFF),
         width: double.infinity,
         child: GridView.builder(
-            padding: EdgeInsets.only(left: 15.0, right: 15.0),
-            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+            padding: const EdgeInsets.only(left: 15.0, right: 15.0),
+            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 2,
               crossAxisSpacing: 10,
               mainAxisSpacing: 10,
@@ -301,9 +301,9 @@ class Containers extends StatelessWidget {
       child: Container(
         height: 180,
         width: 174,
-        padding: EdgeInsets.only(top: 15.0),
+        padding: const EdgeInsets.only(top: 15.0),
         decoration: BoxDecoration(
-          boxShadow: [
+          boxShadow: const [
             BoxShadow(
               color: Color(0x26000000),
               offset: Offset(0, 0),
@@ -311,7 +311,7 @@ class Containers extends StatelessWidget {
             ),
           ],
           borderRadius: BorderRadius.circular(16.0),
-          color: Color(0xFFFFFFFF),
+          color: const Color(0xFFFFFFFF),
         ),
         child: Column(
           children: [
@@ -326,10 +326,10 @@ class Containers extends StatelessWidget {
               width: 155,
               height: 132,
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             Text(
               product.pname,
-              style: TextStyle(fontSize: 14.0, color: Color(0xFF222222)),
+              style: const TextStyle(fontSize: 14.0, color: Color(0xFF222222)),
             ),
           ],
         ),

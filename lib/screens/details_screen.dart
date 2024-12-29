@@ -4,7 +4,7 @@ import 'package:laundry/service.dart';
 import '../product.dart';
 
 class DetailsScreen extends StatefulWidget {
-  DetailsScreen({
+  const DetailsScreen({
     super.key,
     required this.product,
   });
@@ -21,23 +21,23 @@ class _DetailsScreenState extends State<DetailsScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color(0xFF0083F5),
+        backgroundColor: const Color(0xFF0083F5),
         actions: [
           GestureDetector(
             onTap: () {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => CartScreen(),
+                  builder: (context) => const CartScreen(),
                 ),
               );
             },
             child: CircleAvatar(
-              backgroundColor: Color(0xFFD9EDFF),
+              backgroundColor: const Color(0xFFD9EDFF),
               child: Stack(
                 clipBehavior: Clip.none,
                 children: [
-                  Image(
+                  const Image(
                     image: AssetImage('assets/images/Vector.png'),
                     height: 45,
                     width: 30,
@@ -47,18 +47,18 @@ class _DetailsScreenState extends State<DetailsScreen> {
                       right: 0,
                       top: 0,
                       child: Container(
-                        padding: EdgeInsets.all(5),
-                        decoration: BoxDecoration(
+                        padding: const EdgeInsets.all(5),
+                        decoration: const BoxDecoration(
                           color: Color(0xFFFFFFFF),
                           shape: BoxShape.circle,
                         ),
-                        constraints: BoxConstraints(
+                        constraints: const BoxConstraints(
                           minWidth: 6,
                           minHeight: 6,
                         ),
                         child: Text(
                           cartCount.toString(),
-                          style: TextStyle(
+                          style: const TextStyle(
                             color: Color(0xFF0083F5),
                             fontSize: 8,
                             fontWeight: FontWeight.bold,
@@ -71,18 +71,18 @@ class _DetailsScreenState extends State<DetailsScreen> {
               ),
             ),
           ),
-          SizedBox(width: 10.0),
-          CircleAvatar(
+          const SizedBox(width: 10.0),
+          const CircleAvatar(
             backgroundImage: AssetImage('assets/images/profileimage.png'),
           ),
-          SizedBox(width: 10.0),
+          const SizedBox(width: 10.0),
         ],
       ),
       body: Expanded(
         child: Container(
-          margin: EdgeInsets.only(top: 15.0),
-          padding: EdgeInsets.only(top: 15.0),
-          decoration: BoxDecoration(
+          margin: const EdgeInsets.only(top: 15.0),
+          padding: const EdgeInsets.only(top: 15.0),
+          decoration: const BoxDecoration(
             borderRadius: BorderRadius.only(
                 topLeft: Radius.circular(39.0),
                 topRight: Radius.circular(39.0)),
@@ -100,7 +100,7 @@ class _DetailsScreenState extends State<DetailsScreen> {
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               Container(
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   borderRadius: BorderRadius.only(
                     topLeft: Radius.circular(20.0),
                     topRight: Radius.circular(20.0),
@@ -121,9 +121,9 @@ class _DetailsScreenState extends State<DetailsScreen> {
                       height: 200,
                     ),
                     Container(
-                        padding: EdgeInsets.only(
+                        padding: const EdgeInsets.only(
                             left: 16.0, right: 16.0, top: 9.0, bottom: 12.0),
-                        child: Text(
+                        child: const Text(
                           'What you want to do is describe the idea of the dress rather than the actual dress. Your readers aren\'t interested in in-depth descriptions of fabrics or cuts.',
                           textAlign: TextAlign.center,
                           style: TextStyle(
@@ -133,16 +133,16 @@ class _DetailsScreenState extends State<DetailsScreen> {
                           ),
                         )),
                     Container(
-                      margin: EdgeInsets.only(
+                      margin: const EdgeInsets.only(
                         left: 16.0,
                         right: 16.0,
                       ),
-                      child: Divider(
+                      child: const Divider(
                         thickness: 1.0,
                         height: 20.0,
                       ),
                     ),
-                    Row(
+                    const Row(
                       children: [
                         SizedBox(
                           width: 20.0,
@@ -152,11 +152,11 @@ class _DetailsScreenState extends State<DetailsScreen> {
                     ),
                     Container(
                       height: 405,
-                      color: Color(0xFFFFFFFF),
+                      color: const Color(0xFFFFFFFF),
                       child: GridView.builder(
-                        padding: EdgeInsets.only(
+                        padding: const EdgeInsets.only(
                             left: 15.0, right: 15.0, top: 10.0, bottom: 5.0),
-                        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                           crossAxisCount: 3,
                           crossAxisSpacing: 11,
                           mainAxisSpacing: 11,
@@ -200,7 +200,7 @@ class _DetailsScreenState extends State<DetailsScreen> {
                 ),
               ),
               Container(
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   borderRadius: BorderRadius.only(
                       topLeft: Radius.circular(30.0),
                       topRight: Radius.circular(30.0)),
@@ -215,6 +215,7 @@ class _DetailsScreenState extends State<DetailsScreen> {
                   ],
                 ),
                 height: 90,
+                padding: const EdgeInsets.all(20.0),
                 child: TextButton(
                   onPressed: () {
                     Navigator.push(
@@ -235,7 +236,6 @@ class _DetailsScreenState extends State<DetailsScreen> {
                         borderRadius: BorderRadius.circular(17.0)),
                   ),
                 ),
-                padding: EdgeInsets.all(20.0),
               ),
             ],
           ),
@@ -267,7 +267,7 @@ class ServiceArea extends StatelessWidget {
         width: 112,
         height: 99,
         decoration: BoxDecoration(
-          boxShadow: [
+          boxShadow: const [
             BoxShadow(
               color: Color(0x26000000),
               offset: Offset(4.0, 4.0),
@@ -276,8 +276,8 @@ class ServiceArea extends StatelessWidget {
           ],
           borderRadius: BorderRadius.circular(16.0),
           color: isSelected
-              ? Color(0xFF0083F5)
-              : Color(0xFFFFFFFF), // Apply color based on selection
+              ? const Color(0xFF0083F5)
+              : const Color(0xFFFFFFFF), // Apply color based on selection
         ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -286,14 +286,14 @@ class ServiceArea extends StatelessWidget {
               service.servicename,
               style: TextStyle(
                 fontSize: 15,
-                color: isSelected ? Color(0xFFFFFFFF) : Color(0xFF222222),
+                color: isSelected ? const Color(0xFFFFFFFF) : const Color(0xFF222222),
               ),
             ),
             Text(
               service.Price.toString(),
               style: TextStyle(
                 fontSize: 16,
-                color: isSelected ? Color(0xFFFFFFFF) : Color(0xFF222222),
+                color: isSelected ? const Color(0xFFFFFFFF) : const Color(0xFF222222),
               ),
             ),
           ],

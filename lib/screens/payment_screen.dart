@@ -11,18 +11,18 @@ class PaymentScreen extends StatefulWidget {
 
 class _PaymentScreen extends State<PaymentScreen> {
   List<Color> _containerColors = [
-    Color(0xFFFFFFFF),
-    Color(0xFFFFFFFF),
-    Color(0xFFFFFFFF),
+    const Color(0xFFFFFFFF),
+    const Color(0xFFFFFFFF),
+    const Color(0xFFFFFFFF),
   ];
   void _selectOption(int index) {
     setState(() {
       _containerColors = [
-        Color(0xFFFFFFFF),
-        Color(0xFFFFFFFF),
-        Color(0xFFFFFFFF),
+        const Color(0xFFFFFFFF),
+        const Color(0xFFFFFFFF),
+        const Color(0xFFFFFFFF),
       ];
-      _containerColors[index] = Color(0xFF0083F5);
+      _containerColors[index] = const Color(0xFF0083F5);
     });
   }
 
@@ -31,28 +31,28 @@ class _PaymentScreen extends State<PaymentScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
+        title: const Text(
           'Payment',
           style: TextStyle(fontSize: 18.0, color: Color(0xFFF5F5F5)),
         ),
         centerTitle: true,
-        backgroundColor: Color(0xFF0083F5),
+        backgroundColor: const Color(0xFF0083F5),
         actions: [
           GestureDetector(
             onTap: () {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => CartScreen(),
+                  builder: (context) => const CartScreen(),
                 ),
               );
             },
             child: CircleAvatar(
-              backgroundColor: Color(0xFFD9EDFF),
+              backgroundColor: const Color(0xFFD9EDFF),
               child: Stack(
                 clipBehavior: Clip.none,
                 children: [
-                  Image(
+                  const Image(
                     image: AssetImage('assets/images/Vector.png'),
                     height: 45,
                     width: 30,
@@ -62,18 +62,18 @@ class _PaymentScreen extends State<PaymentScreen> {
                       right: 0,
                       top: 0,
                       child: Container(
-                        padding: EdgeInsets.all(5),
-                        decoration: BoxDecoration(
+                        padding: const EdgeInsets.all(5),
+                        decoration: const BoxDecoration(
                           color: Color(0xFFFFFFFF),
                           shape: BoxShape.circle,
                         ),
-                        constraints: BoxConstraints(
+                        constraints: const BoxConstraints(
                           minWidth: 6,
                           minHeight: 6,
                         ),
                         child: Text(
                           cartCount.toString(),
-                          style: TextStyle(
+                          style: const TextStyle(
                             color: Color(0xFF0083F5),
                             fontSize: 8,
                             fontWeight: FontWeight.bold,
@@ -86,18 +86,18 @@ class _PaymentScreen extends State<PaymentScreen> {
               ),
             ),
           ),
-          SizedBox(width: 10.0),
-          CircleAvatar(
+          const SizedBox(width: 10.0),
+          const CircleAvatar(
             backgroundImage: AssetImage('assets/images/profileimage.png'),
           ),
-          SizedBox(width: 10.0),
+          const SizedBox(width: 10.0),
         ],
       ),
       body: Container(
         height: MediaQuery.of(context).size.height,
         width: MediaQuery.of(context).size.width,
-        margin: EdgeInsets.only(top: 15.0),
-        decoration: BoxDecoration(
+        margin: const EdgeInsets.only(top: 15.0),
+        decoration: const BoxDecoration(
           borderRadius: BorderRadius.only(
             topLeft: Radius.circular(39.0),
             topRight: Radius.circular(39.0),
@@ -111,12 +111,12 @@ class _PaymentScreen extends State<PaymentScreen> {
             ),
           ],
         ),
-        padding: EdgeInsets.only(top: 43.0),
+        padding: const EdgeInsets.only(top: 43.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Container(
-              margin: EdgeInsets.only(left: 37, right: 37, top: 10),
+              margin: const EdgeInsets.only(left: 37, right: 37, top: 10),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -124,13 +124,13 @@ class _PaymentScreen extends State<PaymentScreen> {
                     onTap: () => _selectOption(0), // Google Pay option
                     child: Container(
                       padding:
-                          EdgeInsets.only(left: 10.0, top: 7.0, bottom: 7.0),
+                          const EdgeInsets.only(left: 10.0, top: 7.0, bottom: 7.0),
                       decoration: BoxDecoration(
-                        border: Border.all(color: Color(0xFFCDCDCD)),
+                        border: Border.all(color: const Color(0xFFCDCDCD)),
                         borderRadius: BorderRadius.circular(10.0),
                         color: _containerColors[0], // Color for Google Pay
                       ),
-                      child: Row(
+                      child: const Row(
                         children: [
                           CircleAvatar(
                               backgroundImage:
@@ -147,20 +147,20 @@ class _PaymentScreen extends State<PaymentScreen> {
                       ),
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 13.0,
                   ),
                   GestureDetector(
                     onTap: () => _selectOption(1), // Phonepe option
                     child: Container(
                       padding:
-                          EdgeInsets.only(left: 10.0, top: 7.0, bottom: 7.0),
+                          const EdgeInsets.only(left: 10.0, top: 7.0, bottom: 7.0),
                       decoration: BoxDecoration(
-                        border: Border.all(color: Color(0xFFCDCDCD)),
+                        border: Border.all(color: const Color(0xFFCDCDCD)),
                         borderRadius: BorderRadius.circular(10.0),
                         color: _containerColors[1], // Color for Phonepe
                       ),
-                      child: Row(
+                      child: const Row(
                         children: [
                           CircleAvatar(
                               backgroundImage:
@@ -177,20 +177,20 @@ class _PaymentScreen extends State<PaymentScreen> {
                       ),
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 13,
                   ),
                   GestureDetector(
                     onTap: () => _selectOption(2), // COD option
                     child: Container(
                       padding:
-                          EdgeInsets.only(left: 10.0, top: 7.0, bottom: 7.0),
+                          const EdgeInsets.only(left: 10.0, top: 7.0, bottom: 7.0),
                       decoration: BoxDecoration(
-                        border: Border.all(color: Color(0xFFCDCDCD)),
+                        border: Border.all(color: const Color(0xFFCDCDCD)),
                         borderRadius: BorderRadius.circular(10.0),
                         color: _containerColors[2], // Color for COD
                       ),
-                      child: Row(
+                      child: const Row(
                         children: [
                           CircleAvatar(
                               backgroundImage:
@@ -214,7 +214,7 @@ class _PaymentScreen extends State<PaymentScreen> {
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 Container(
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     borderRadius: BorderRadius.only(
                         topLeft: Radius.circular(30.0),
                         topRight: Radius.circular(30.0)),
@@ -229,6 +229,7 @@ class _PaymentScreen extends State<PaymentScreen> {
                     ],
                   ),
                   height: 90,
+                  padding: const EdgeInsets.all(20.0),
                   child: TextButton(
                     onPressed: () {
                       Navigator.push(
@@ -249,7 +250,6 @@ class _PaymentScreen extends State<PaymentScreen> {
                           borderRadius: BorderRadius.circular(17.0)),
                     ),
                   ),
-                  padding: EdgeInsets.all(20.0),
                 ),
               ],
             ),

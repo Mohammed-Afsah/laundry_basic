@@ -4,7 +4,7 @@ import 'package:laundry/landing/landing_bloc.dart';
 import 'package:laundry/screens/landing_page.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -16,17 +16,17 @@ class MyApp extends StatelessWidget {
       create: (context) => LandingBloc(),
       child: MaterialApp(
         initialRoute: '/',
-        routes: {},
+        routes: const {},
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
-          scaffoldBackgroundColor: Color(0xFF0083F5),
-          appBarTheme: AppBarTheme(
+          scaffoldBackgroundColor: const Color(0xFF0083F5),
+          appBarTheme: const AppBarTheme(
             iconTheme: IconThemeData(
               color: Colors.white,
             ),
           ),
         ),
-        home: LandingPage(),
+        home: const LandingPage(),
       ),
     );
   }

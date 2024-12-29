@@ -9,10 +9,10 @@ class SignupPage extends StatefulWidget {
 }
 
 class _SignupPageState extends State<SignupPage> {
-  TextEditingController _nameController = TextEditingController();
-  TextEditingController _emailController = TextEditingController();
-  TextEditingController _passwordController = TextEditingController();
-  TextEditingController _mobileController = TextEditingController();
+  final TextEditingController _nameController = TextEditingController();
+  final TextEditingController _emailController = TextEditingController();
+  final TextEditingController _passwordController = TextEditingController();
+  final TextEditingController _mobileController = TextEditingController();
   bool _obscureText = true;
 
   void _userDetails() {
@@ -40,12 +40,12 @@ class _SignupPageState extends State<SignupPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFF0083F5),
+      backgroundColor: const Color(0xFF0083F5),
       body: SingleChildScrollView(
         // Makes the form scrollable when the keyboard is shown
         child: Container(
-          margin: EdgeInsets.only(top: 122.0),
-          decoration: BoxDecoration(
+          margin: const EdgeInsets.only(top: 122.0),
+          decoration: const BoxDecoration(
             borderRadius: BorderRadius.only(
                 topLeft: Radius.circular(39.0),
                 topRight: Radius.circular(39.0)),
@@ -58,43 +58,43 @@ class _SignupPageState extends State<SignupPage> {
               ),
             ],
           ),
-          padding: EdgeInsets.only(top: 43.0),
+          padding: const EdgeInsets.only(top: 43.0),
           child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 19.0),
+            padding: const EdgeInsets.symmetric(horizontal: 19.0),
             child: Column(
               children: [
-                Text(
+                const Text(
                   'Create an account',
                   style: TextStyle(color: Color(0xFF000000), fontSize: 19),
                 ),
-                SizedBox(height: 4),
-                Text(
+                const SizedBox(height: 4),
+                const Text(
                   'Nam in risus quis risus consectetur pharetra vel vel erat. Suspendisse potenti. Maecenas sit amet semper',
                   style: TextStyle(color: Color(0xFF808080)),
                   textAlign: TextAlign.center,
                 ),
                 TextField(
                   controller: _nameController,
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                     labelText: 'Name',
                     labelStyle: TextStyle(color: Color(0xFF848484)),
                   ),
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 TextField(
                   controller: _emailController,
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                     labelText: 'Email',
                     labelStyle: TextStyle(color: Color(0xFF848484)),
                   ),
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 TextField(
                   controller: _passwordController,
                   obscureText: _obscureText,
                   decoration: InputDecoration(
                     labelText: 'Password',
-                    labelStyle: TextStyle(color: Color(0xFF848484)),
+                    labelStyle: const TextStyle(color: Color(0xFF848484)),
                     suffixIcon: IconButton(
                       onPressed: () {
                         setState(() {
@@ -104,35 +104,35 @@ class _SignupPageState extends State<SignupPage> {
                       icon: Icon(_obscureText
                           ? Icons.visibility_off
                           : Icons.visibility),
-                      color: Color(0xFF848484),
+                      color: const Color(0xFF848484),
                     ),
                   ),
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 TextField(
                   controller: _mobileController,
                   keyboardType: TextInputType.phone,
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                     labelText: 'Enter Mobile Number',
                     labelStyle: TextStyle(color: Color(0xFF848484)),
                   ),
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 ElevatedButton(
                   onPressed: _userDetails,
+                  style: ElevatedButton.styleFrom(
+                    minimumSize: const Size(358, 45),
+                    backgroundColor: const Color(0xFF0083F5),
+                    shape: ContinuousRectangleBorder(
+                        borderRadius: BorderRadius.circular(6.0)),
+                  ),
                   child: Text(
                     'Sign Up',
                     style: TextStyle(color: Color(0xFFFFFFFF), fontSize: 14),
                   ),
-                  style: ElevatedButton.styleFrom(
-                    minimumSize: Size(358, 45),
-                    backgroundColor: Color(0xFF0083F5),
-                    shape: ContinuousRectangleBorder(
-                        borderRadius: BorderRadius.circular(6.0)),
-                  ),
                 ),
-                SizedBox(height: 27),
-                Row(
+                const SizedBox(height: 27),
+                const Row(
                   children: [
                     Expanded(
                       child: Divider(
@@ -154,19 +154,19 @@ class _SignupPageState extends State<SignupPage> {
                     ),
                   ],
                 ),
-                SizedBox(height: 27),
+                const SizedBox(height: 27),
                 Row(
                   children: [
                     TextButton(
                       style: TextButton.styleFrom(
-                        minimumSize: Size(194.0, 45.0),
+                        minimumSize: const Size(194.0, 45.0),
                         shape: ContinuousRectangleBorder(
-                          side: BorderSide(color: Color(0xFFC1C1C1)),
+                          side: const BorderSide(color: Color(0xFFC1C1C1)),
                           borderRadius: BorderRadius.circular(6.0),
                         ),
                       ),
                       onPressed: () {},
-                      child: Row(
+                      child: const Row(
                         children: [
                           CircleAvatar(
                             backgroundImage:
@@ -182,17 +182,17 @@ class _SignupPageState extends State<SignupPage> {
                         ],
                       ),
                     ),
-                    SizedBox(width: 6),
+                    const SizedBox(width: 6),
                     TextButton(
                       style: TextButton.styleFrom(
-                        minimumSize: Size(194.0, 45.0),
+                        minimumSize: const Size(194.0, 45.0),
                         shape: ContinuousRectangleBorder(
-                          side: BorderSide(color: Color(0xFFC1C1C1)),
+                          side: const BorderSide(color: Color(0xFFC1C1C1)),
                           borderRadius: BorderRadius.circular(6.0),
                         ),
                       ),
                       onPressed: () {},
-                      child: Row(
+                      child: const Row(
                         children: [
                           CircleAvatar(
                             backgroundImage:
@@ -210,12 +210,12 @@ class _SignupPageState extends State<SignupPage> {
                     ),
                   ],
                 ),
-                SizedBox(height: 147),
+                const SizedBox(height: 147),
                 Container(
-                  padding: EdgeInsets.only(left: 80.0),
+                  padding: const EdgeInsets.only(left: 80.0),
                   child: Row(
                     children: [
-                      Text(
+                      const Text(
                         'Already you have an account?',
                         style:
                             TextStyle(color: Color(0xFF848484), fontSize: 14),
@@ -225,11 +225,11 @@ class _SignupPageState extends State<SignupPage> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => LoginPage(),
+                              builder: (context) => const LoginPage(),
                             ),
                           );
                         },
-                        child: Text(
+                        child: const Text(
                           'Login',
                           style:
                               TextStyle(color: Color(0xFF05518A), fontSize: 14),
@@ -238,7 +238,7 @@ class _SignupPageState extends State<SignupPage> {
                     ],
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 32,
                 )
               ],

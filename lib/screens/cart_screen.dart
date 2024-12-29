@@ -18,28 +18,28 @@ class _CartScreenState extends State<CartScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
+        title: const Text(
           'My Cart',
           style: TextStyle(fontSize: 18.0, color: Color(0xFFF5F5F5)),
         ),
         centerTitle: true,
-        backgroundColor: Color(0xFF0083F5),
+        backgroundColor: const Color(0xFF0083F5),
         actions: [
           GestureDetector(
             onTap: () {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => CartScreen(),
+                  builder: (context) => const CartScreen(),
                 ),
               );
             },
             child: CircleAvatar(
-              backgroundColor: Color(0xFFD9EDFF),
+              backgroundColor: const Color(0xFFD9EDFF),
               child: Stack(
                 clipBehavior: Clip.none,
                 children: [
-                  Image(
+                  const Image(
                     image: AssetImage('assets/images/Vector.png'),
                     height: 45,
                     width: 30,
@@ -49,18 +49,18 @@ class _CartScreenState extends State<CartScreen> {
                       right: 0,
                       top: 0,
                       child: Container(
-                        padding: EdgeInsets.all(5),
-                        decoration: BoxDecoration(
+                        padding: const EdgeInsets.all(5),
+                        decoration: const BoxDecoration(
                           color: Color(0xFFFFFFFF),
                           shape: BoxShape.circle,
                         ),
-                        constraints: BoxConstraints(
+                        constraints: const BoxConstraints(
                           minWidth: 6,
                           minHeight: 6,
                         ),
                         child: Text(
                           cartCount.toString(),
-                          style: TextStyle(
+                          style: const TextStyle(
                             color: Color(0xFF0083F5),
                             fontSize: 8,
                             fontWeight: FontWeight.bold,
@@ -73,16 +73,16 @@ class _CartScreenState extends State<CartScreen> {
               ),
             ),
           ),
-          SizedBox(width: 10.0),
-          CircleAvatar(
+          const SizedBox(width: 10.0),
+          const CircleAvatar(
             backgroundImage: AssetImage('assets/images/profileimage.png'),
           ),
-          SizedBox(width: 10.0),
+          const SizedBox(width: 10.0),
         ],
       ),
       body: Container(
-        margin: EdgeInsets.only(top: 15.0),
-        decoration: BoxDecoration(
+        margin: const EdgeInsets.only(top: 15.0),
+        decoration: const BoxDecoration(
           borderRadius: BorderRadius.only(
               topLeft: Radius.circular(39.0), topRight: Radius.circular(39.0)),
           color: Color(0xFFFFFFFF),
@@ -95,12 +95,12 @@ class _CartScreenState extends State<CartScreen> {
             ),
           ],
         ),
-        padding: EdgeInsets.only(top: 43.0),
+        padding: const EdgeInsets.only(top: 43.0),
         child: ListView.builder(
           itemBuilder: (context, index) {
             return ListTile(
               leading: Container(
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                     borderRadius: BorderRadius.all(Radius.circular(16.0)),
                     color: Colors.red,
                     image: DecorationImage(
@@ -109,15 +109,15 @@ class _CartScreenState extends State<CartScreen> {
                 height: 75,
                 width: 88,
               ),
-              title: Text(
+              title: const Text(
                 'Silk dress',
                 style: TextStyle(color: Color(0xFF222222), fontSize: 14),
               ),
-              subtitle: Column(
+              subtitle: const Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'hii',
+                    'i want to oneby one selected services from details screen here',
                     style: TextStyle(fontSize: 12, color: Color(0xFF9D9D9D)),
                   ),
                   Text(
@@ -129,10 +129,10 @@ class _CartScreenState extends State<CartScreen> {
               trailing: Container(
                 width: 38,
                 height: 75,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                     borderRadius: BorderRadius.all(Radius.circular(29.0)),
                     color: Color(0xFFE5F3FF)),
-                child: Column(
+                child: const Column(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     Icon(
@@ -150,17 +150,18 @@ class _CartScreenState extends State<CartScreen> {
                   ],
                 ),
               ),
-              contentPadding: EdgeInsets.only(bottom: 20.0, left: 17.0),
+              contentPadding: const EdgeInsets.only(bottom: 20.0, left: 17.0),
             );
           },
           itemCount: 6,
         ),
       ),
       bottomNavigationBar: Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           color: Color(0xFFFFFFFF),
         ),
         height: 90,
+        padding: const EdgeInsets.all(20.0),
         child: TextButton(
           onPressed: () {
             Navigator.push(
@@ -181,7 +182,6 @@ class _CartScreenState extends State<CartScreen> {
                 borderRadius: BorderRadius.circular(17.0)),
           ),
         ),
-        padding: EdgeInsets.all(20.0),
       ),
     );
   }

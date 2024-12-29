@@ -22,8 +22,8 @@ class _LandingPageState extends State<LandingPage> {
       child: Scaffold(body:
           BlocBuilder<LandingBloc, LandingState>(builder: (context, state) {
         return Container(
-          padding: EdgeInsets.only(top: 189.0),
-          color: Color(0xFFFFFFFF),
+          padding: const EdgeInsets.only(top: 189.0),
+          color: const Color(0xFFFFFFFF),
           child: Stack(
             children: [
               PageView(
@@ -66,12 +66,12 @@ class _LandingPageState extends State<LandingPage> {
                       dotsCount: 3,
                       mainAxisAlignment: MainAxisAlignment.center,
                       decorator: DotsDecorator(
-                          color: Color(0xFFD9D9D9),
-                          activeColor: Color(0xFF0083F5),
-                          size: Size.square(8.0),
+                          color: const Color(0xFFD9D9D9),
+                          activeColor: const Color(0xFF0083F5),
+                          size: const Size.square(8.0),
                           activeShape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(5.0)),
-                          activeSize: Size(10.0, 8.0)))),
+                          activeSize: const Size(10.0, 8.0)))),
             ],
           ),
         );
@@ -97,24 +97,24 @@ class _LandingPageState extends State<LandingPage> {
         Container(
           child: Text(
             title,
-            style: TextStyle(
+            style: const TextStyle(
               color: Color(0xFF000000),
               fontSize: 18.0,
             ),
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 2.0,
         ),
         Container(
-          padding: EdgeInsets.only(left: 30.0, right: 30.0),
+          padding: const EdgeInsets.only(left: 30.0, right: 30.0),
           child: Text(
             subTitle,
             textAlign: TextAlign.center,
-            style: TextStyle(color: Color(0xFF808080), fontSize: 13.0),
+            style: const TextStyle(color: Color(0xFF808080), fontSize: 13.0),
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 300.0,
         ),
         Center(
@@ -125,11 +125,11 @@ class _LandingPageState extends State<LandingPage> {
                 onTap: () {
                   if (index < 3) {
                     pageController.animateToPage(index,
-                        duration: Duration(milliseconds: 650),
+                        duration: const Duration(milliseconds: 650),
                         curve: Curves.decelerate);
                   } else {
                     Navigator.push(context,  MaterialPageRoute(
-                      builder: (context) => LoginPage(),
+                      builder: (context) => const LoginPage(),
                     ),);
                   }
                 },
@@ -137,13 +137,13 @@ class _LandingPageState extends State<LandingPage> {
                   width: 308.0,
                   height: 45.0,
                   decoration: BoxDecoration(
-                    color: Color(0xFF0083F5),
+                    color: const Color(0xFF0083F5),
                     borderRadius: BorderRadius.circular(12.0),
                   ),
                   child: Center(
                     child: Text(
                       buttonName,
-                      style: TextStyle(
+                      style: const TextStyle(
                         color: Color(0xFFFFFFFF),
                         fontSize: 16.0,
                       ),
@@ -156,11 +156,11 @@ class _LandingPageState extends State<LandingPage> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => LoginPage(),
+                        builder: (context) => const LoginPage(),
                       ),
                     );
                   },
-                  child: Text(
+                  child: const Text(
                     'Skip',
                     style: TextStyle(color: Color(0xFF0083F5), fontSize: 16.0),
                   ))

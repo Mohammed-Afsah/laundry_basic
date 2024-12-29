@@ -46,28 +46,28 @@ class _OrderDetailsState extends State<OrderDetails> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
+        title: const Text(
           'Order Details',
           style: TextStyle(fontSize: 18.0, color: Color(0xFFF5F5F5)),
         ),
         centerTitle: true,
-        backgroundColor: Color(0xFF0083F5),
+        backgroundColor: const Color(0xFF0083F5),
         actions: [
           GestureDetector(
             onTap: () {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => CartScreen(),
+                  builder: (context) => const CartScreen(),
                 ),
               );
             },
             child: CircleAvatar(
-              backgroundColor: Color(0xFFD9EDFF),
+              backgroundColor: const Color(0xFFD9EDFF),
               child: Stack(
                 clipBehavior: Clip.none,
                 children: [
-                  Image(
+                  const Image(
                     image: AssetImage('assets/images/Vector.png'),
                     height: 45,
                     width: 30,
@@ -77,18 +77,18 @@ class _OrderDetailsState extends State<OrderDetails> {
                       right: 0,
                       top: 0,
                       child: Container(
-                        padding: EdgeInsets.all(5),
-                        decoration: BoxDecoration(
+                        padding: const EdgeInsets.all(5),
+                        decoration: const BoxDecoration(
                           color: Color(0xFFFFFFFF),
                           shape: BoxShape.circle,
                         ),
-                        constraints: BoxConstraints(
+                        constraints: const BoxConstraints(
                           minWidth: 6,
                           minHeight: 6,
                         ),
                         child: Text(
                           cartCount.toString(),
-                          style: TextStyle(
+                          style: const TextStyle(
                             color: Color(0xFF0083F5),
                             fontSize: 8,
                             fontWeight: FontWeight.bold,
@@ -101,18 +101,18 @@ class _OrderDetailsState extends State<OrderDetails> {
               ),
             ),
           ),
-          SizedBox(width: 10.0),
-          CircleAvatar(
+          const SizedBox(width: 10.0),
+          const CircleAvatar(
             backgroundImage: AssetImage('assets/images/profileimage.png'),
           ),
-          SizedBox(width: 10.0),
+          const SizedBox(width: 10.0),
         ],
       ),
       body: Container(
         height: MediaQuery.of(context).size.height,
         width: MediaQuery.of(context).size.width,
-        margin: EdgeInsets.only(top: 15.0),
-        decoration: BoxDecoration(
+        margin: const EdgeInsets.only(top: 15.0),
+        decoration: const BoxDecoration(
           borderRadius: BorderRadius.only(
             topLeft: Radius.circular(39.0),
             topRight: Radius.circular(39.0),
@@ -126,16 +126,16 @@ class _OrderDetailsState extends State<OrderDetails> {
             ),
           ],
         ),
-        padding: EdgeInsets.only(top: 30.0),
+        padding: const EdgeInsets.only(top: 30.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             // Customer Info Section
             Container(
-              padding: EdgeInsets.all(10.0),
-              margin: EdgeInsets.only(left: 16.0, right: 16.0),
+              padding: const EdgeInsets.all(10.0),
+              margin: const EdgeInsets.only(left: 16.0, right: 16.0),
               height: 114,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 borderRadius: BorderRadius.all(Radius.circular(14.0)),
               ),
               child: Row(
@@ -143,7 +143,7 @@ class _OrderDetailsState extends State<OrderDetails> {
                   Container(
                     height: 80,
                     width: 100,
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       image: DecorationImage(
                         image: AssetImage('assets/images/profileimage.png'),
                         fit: BoxFit.cover,
@@ -151,8 +151,8 @@ class _OrderDetailsState extends State<OrderDetails> {
                       borderRadius: BorderRadius.all(Radius.circular(10.0)),
                     ),
                   ),
-                  SizedBox(width: 10.0),
-                  Column(
+                  const SizedBox(width: 10.0),
+                  const Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -173,10 +173,10 @@ class _OrderDetailsState extends State<OrderDetails> {
                       ),
                     ],
                   ),
-                  SizedBox(width: 80),
+                  const SizedBox(width: 80),
                   TextButton(
                     onPressed: () {},
-                    child: CircleAvatar(
+                    child: const CircleAvatar(
                       minRadius: 15.0,
                       backgroundColor: Color(0xFFE5F3FF),
                       child: Icon(
@@ -191,20 +191,20 @@ class _OrderDetailsState extends State<OrderDetails> {
             ),
             // Address Section
             Container(
-              padding: EdgeInsets.only(left: 17.0, right: 17.0),
-              child: Text(
+              padding: const EdgeInsets.only(left: 17.0, right: 17.0),
+              child: const Text(
                 'Address',
                 style: TextStyle(color: Color(0xFF2E2E2E), fontSize: 16),
               ),
             ),
             Container(
-              padding: EdgeInsets.only(
+              padding: const EdgeInsets.only(
                   left: 9.0, right: 31.0, bottom: 14.0, top: 13.0),
-              margin: EdgeInsets.only(top: 11.0, bottom: 11.0, left: 18.0),
+              margin: const EdgeInsets.only(top: 11.0, bottom: 11.0, left: 18.0),
               height: 114,
               decoration:
-                  BoxDecoration(border: Border.all(color: Color(0xFFDDDDDD))),
-              child: Column(
+                  BoxDecoration(border: Border.all(color: const Color(0xFFDDDDDD))),
+              child: const Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
@@ -221,7 +221,7 @@ class _OrderDetailsState extends State<OrderDetails> {
             ),
             // Calendar Section
             Container(
-              margin: EdgeInsets.only(left: 18, right: 18),
+              margin: const EdgeInsets.only(left: 18, right: 18),
               width: double.infinity,
               height: 200,
               child: Column(
@@ -230,7 +230,7 @@ class _OrderDetailsState extends State<OrderDetails> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text(
+                      const Text(
                         'Select Date',
                         style:
                             TextStyle(fontSize: 16, color: Color(0xFF2E2E2E)),
@@ -240,25 +240,25 @@ class _OrderDetailsState extends State<OrderDetails> {
                             ' ' +
                             currentDateTime.year.toString(),
                         style:
-                            TextStyle(color: Color(0xFF2E2E2E), fontSize: 16),
+                            const TextStyle(color: Color(0xFF2E2E2E), fontSize: 16),
                       ),
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 18,
                   ),
-                  Container(
+                  SizedBox(
                     width: double.infinity,
                     height: 150,
                     child: ListView.builder(
                       controller: scrollController,
                       scrollDirection: Axis.horizontal,
-                      physics: ClampingScrollPhysics(),
+                      physics: const ClampingScrollPhysics(),
                       shrinkWrap: true,
                       itemCount: currentMonthList.length,
                       itemBuilder: (BuildContext context, int index) {
                         return Padding(
-                          padding: EdgeInsets.fromLTRB(8, 0, 0, 0),
+                          padding: const EdgeInsets.fromLTRB(8, 0, 0, 0),
                           child: GestureDetector(
                             onTap: () {
                               setState(() {
@@ -271,8 +271,8 @@ class _OrderDetailsState extends State<OrderDetails> {
                               decoration: BoxDecoration(
                                 color: (currentMonthList[index].day !=
                                         currentDateTime.day)
-                                    ? Color(0xFFFFFFFF)
-                                    : Color(0xFF0083F5),
+                                    ? const Color(0xFFFFFFFF)
+                                    : const Color(0xFF0083F5),
                                 borderRadius: BorderRadius.circular(14),
                               ),
                               child: Center(
@@ -288,8 +288,8 @@ class _OrderDetailsState extends State<OrderDetails> {
                                           fontWeight: FontWeight.bold,
                                           color: (currentMonthList[index].day !=
                                                   currentDateTime.day)
-                                              ? Color(0xFF787878)
-                                              : Color(0xFFFFFFFF)),
+                                              ? const Color(0xFF787878)
+                                              : const Color(0xFFFFFFFF)),
                                     ),
                                     Text(
                                       currentMonthList[index].day.toString(),
@@ -298,8 +298,8 @@ class _OrderDetailsState extends State<OrderDetails> {
                                           fontWeight: FontWeight.bold,
                                           color: (currentMonthList[index].day !=
                                                   currentDateTime.day)
-                                              ? Color(0xFF787878)
-                                              : Color(0xFFFFFFFF)),
+                                              ? const Color(0xFF787878)
+                                              : const Color(0xFFFFFFFF)),
                                     ),
                                   ],
                                 ),
@@ -314,10 +314,10 @@ class _OrderDetailsState extends State<OrderDetails> {
               ),
             ),
             Container(
-                margin: EdgeInsets.only(left: 18), child: Text('Select Time')),
+                margin: const EdgeInsets.only(left: 18), child: const Text('Select Time')),
             Column(
               children: [
-                SizedBox(height: 16),
+                const SizedBox(height: 16),
                 SingleChildScrollView(
                   scrollDirection: Axis.horizontal,
                   child: Row(
@@ -329,21 +329,21 @@ class _OrderDetailsState extends State<OrderDetails> {
                           });
                         },
                         child: Container(
-                          margin: EdgeInsets.all(8.0),
-                          padding: EdgeInsets.symmetric(
+                          margin: const EdgeInsets.all(8.0),
+                          padding: const EdgeInsets.symmetric(
                               horizontal: 16.0, vertical: 8.0),
                           decoration: BoxDecoration(
                               color: _selectedTimeSlot == slot
-                                  ? Color(0xFF0083F5)
-                                  : Color(0xFFFFFFFF),
+                                  ? const Color(0xFF0083F5)
+                                  : const Color(0xFFFFFFFF),
                               borderRadius: BorderRadius.circular(8.0),
-                              border: Border.all(color: Color(0xFFBBBBBB))),
+                              border: Border.all(color: const Color(0xFFBBBBBB))),
                           child: Text(
                             slot,
                             style: TextStyle(
                               color: _selectedTimeSlot == slot
-                                  ? Color(0xFFFFFFFF)
-                                  : Color(0xFFBBBBBB),
+                                  ? const Color(0xFFFFFFFF)
+                                  : const Color(0xFFBBBBBB),
                             ),
                           ),
                         ),
@@ -351,17 +351,18 @@ class _OrderDetailsState extends State<OrderDetails> {
                     }).toList(),
                   ),
                 ),
-                SizedBox(height: 16),
+                const SizedBox(height: 16),
               ],
             )
           ],
         ),
       ),
       bottomNavigationBar: Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           color: Color(0xFFFFFFFF),
         ),
         height: 90,
+        padding: const EdgeInsets.all(20.0),
         child: TextButton(
           onPressed: () {
             Navigator.push(
@@ -383,7 +384,6 @@ class _OrderDetailsState extends State<OrderDetails> {
             ),
           ),
         ),
-        padding: EdgeInsets.all(20.0),
       ),
     );
   }

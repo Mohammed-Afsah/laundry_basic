@@ -14,28 +14,28 @@ class _EnquiryformState extends State<Enquiryform> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
+        title: const Text(
           'Enquiry Form',
           style: TextStyle(fontSize: 18.0, color: Color(0xFFF5F5F5)),
         ),
         centerTitle: true,
-        backgroundColor: Color(0xFF0083F5),
+        backgroundColor: const Color(0xFF0083F5),
         actions: [
           GestureDetector(
             onTap: () {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => CartScreen(),
+                  builder: (context) => const CartScreen(),
                 ),
               );
             },
             child: CircleAvatar(
-              backgroundColor: Color(0xFFD9EDFF),
+              backgroundColor: const Color(0xFFD9EDFF),
               child: Stack(
                 clipBehavior: Clip.none,
                 children: [
-                  Image(
+                  const Image(
                     image: AssetImage('assets/images/Vector.png'),
                     height: 45,
                     width: 30,
@@ -45,18 +45,18 @@ class _EnquiryformState extends State<Enquiryform> {
                       right: 0,
                       top: 0,
                       child: Container(
-                        padding: EdgeInsets.all(5),
-                        decoration: BoxDecoration(
+                        padding: const EdgeInsets.all(5),
+                        decoration: const BoxDecoration(
                           color: Color(0xFFFFFFFF),
                           shape: BoxShape.circle,
                         ),
-                        constraints: BoxConstraints(
+                        constraints: const BoxConstraints(
                           minWidth: 6,
                           minHeight: 6,
                         ),
                         child: Text(
                           cartCount.toString(),
-                          style: TextStyle(
+                          style: const TextStyle(
                             color: Color(0xFF0083F5),
                             fontSize: 8,
                             fontWeight: FontWeight.bold,
@@ -69,18 +69,18 @@ class _EnquiryformState extends State<Enquiryform> {
               ),
             ),
           ),
-          SizedBox(width: 10.0),
-          CircleAvatar(
+          const SizedBox(width: 10.0),
+          const CircleAvatar(
             backgroundImage: AssetImage('assets/images/profileimage.png'),
           ),
-          SizedBox(width: 10.0),
+          const SizedBox(width: 10.0),
         ],
       ),
       body: Container(
           height: MediaQuery.of(context).size.height,
           width: MediaQuery.of(context).size.width,
-          margin: EdgeInsets.only(top: 15.0),
-          decoration: BoxDecoration(
+          margin: const EdgeInsets.only(top: 15.0),
+          decoration: const BoxDecoration(
             borderRadius: BorderRadius.only(
                 topLeft: Radius.circular(39.0),
                 topRight: Radius.circular(39.0)),
@@ -94,13 +94,13 @@ class _EnquiryformState extends State<Enquiryform> {
               ),
             ],
           ),
-          padding: EdgeInsets.only(top: 43.0),
+          padding: const EdgeInsets.only(top: 43.0),
           child: Container(
-            margin: EdgeInsets.only(left: 24.0, right: 24.0),
+            margin: const EdgeInsets.only(left: 24.0, right: 24.0),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Row(
+                const Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
@@ -113,47 +113,47 @@ class _EnquiryformState extends State<Enquiryform> {
                     )
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 25.0,
                 ),
-                TextField(
+                const TextField(
                   decoration: InputDecoration(
                     border: OutlineInputBorder(),
                     labelText: 'Name',
                     labelStyle: TextStyle(color: Color(0xFF848484)),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 14.0,
                 ),
-                TextField(
+                const TextField(
                     decoration: InputDecoration(
                   border: OutlineInputBorder(),
                   labelText: 'Enter your email',
                   labelStyle: TextStyle(color: Color(0xFF848484)),
                 )),
-                SizedBox(
+                const SizedBox(
                   height: 14.0,
                 ),
-                TextField(
+                const TextField(
                     decoration: InputDecoration(
                   border: OutlineInputBorder(),
                   labelText: 'Enter phone number',
                   labelStyle: TextStyle(color: Color(0xFF848484)),
                 )),
-                SizedBox(
+                const SizedBox(
                   height: 14.0,
                 ),
-                TextField(
+                const TextField(
                     decoration: InputDecoration(
                   border: OutlineInputBorder(),
                   labelText: 'Enter subject',
                   labelStyle: TextStyle(color: Color(0xFF848484)),
                 )),
-                SizedBox(
+                const SizedBox(
                   height: 14.0,
                 ),
-                TextField(
+                const TextField(
                     maxLines: 5,
                     decoration: InputDecoration(
                       border: OutlineInputBorder(),
@@ -161,23 +161,23 @@ class _EnquiryformState extends State<Enquiryform> {
                       alignLabelWithHint: true,
                       labelStyle: TextStyle(color: Color(0xFF848484)),
                     )),
-                SizedBox(
+                const SizedBox(
                   height: 14.0,
                 ),
                 Center(
                   child: ElevatedButton(
                     onPressed: () {},
-                    child: Text(
-                      'Submit',
-                      style: TextStyle(color: Color(0xFFFFFFFF), fontSize: 12),
-                    ),
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: Color(0xFF0083F5),
-                      minimumSize: Size(163, 32),
+                      backgroundColor: const Color(0xFF0083F5),
+                      minimumSize: const Size(163, 32),
                       shape: RoundedRectangleBorder(
                         borderRadius:
                             BorderRadius.circular(7), // Set the border radius
                       ),
+                    ),
+                    child: Text(
+                      'Submit',
+                      style: TextStyle(color: Color(0xFFFFFFFF), fontSize: 12),
                     ),
                   ),
                 ),

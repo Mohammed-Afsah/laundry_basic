@@ -16,8 +16,8 @@ class _LoginPageState extends State<LoginPage> {
     {'email': 'user3@example.com', 'password': 'securepassword789'},
   ];
 
-  TextEditingController _enteredemail = TextEditingController();
-  TextEditingController _enteredpassword = TextEditingController();
+  final TextEditingController _enteredemail = TextEditingController();
+  final TextEditingController _enteredpassword = TextEditingController();
   bool _obscureText = true;
 
   void _login() {
@@ -32,12 +32,12 @@ class _LoginPageState extends State<LoginPage> {
       // Navigate to the home screen if credentials match
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) => HomeScreen()),
+        MaterialPageRoute(builder: (context) => const HomeScreen()),
       );
     } else {
       // Show error message if credentials don't match
       ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('Invalid email or password')),
+        const SnackBar(content: Text('Invalid email or password')),
       );
     }
   }
@@ -45,12 +45,12 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFF0083F5),
+      backgroundColor: const Color(0xFF0083F5),
       body: SingleChildScrollView(
         child: Container(
           height: MediaQuery.of(context).size.height,
-          margin: EdgeInsets.only(top: 122.0),
-          decoration: BoxDecoration(
+          margin: const EdgeInsets.only(top: 122.0),
+          decoration: const BoxDecoration(
             borderRadius: BorderRadius.only(
               topLeft: Radius.circular(39.0),
               topRight: Radius.circular(39.0),
@@ -64,35 +64,35 @@ class _LoginPageState extends State<LoginPage> {
               ),
             ],
           ),
-          padding: EdgeInsets.only(top: 43.0),
+          padding: const EdgeInsets.only(top: 43.0),
           child: Container(
-            padding: EdgeInsets.symmetric(horizontal: 19.0),
+            padding: const EdgeInsets.symmetric(horizontal: 19.0),
             child: Column(
               children: [
-                Text(
+                const Text(
                   'Welcome Back',
                   style: TextStyle(color: Color(0xFF000000), fontSize: 19),
                 ),
-                SizedBox(height: 4),
-                Text(
+                const SizedBox(height: 4),
+                const Text(
                   'Nam in risus quis risus consectetur pharetra vel vel erat. Suspendisse potenti. Maecenas sit amet semper',
                   style: TextStyle(color: Color(0xFF808080)),
                   textAlign: TextAlign.center,
                 ),
-                SizedBox(height: 30),
+                const SizedBox(height: 30),
                 TextField(
                   controller: _enteredemail,
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                       labelText: 'Email',
                       labelStyle: TextStyle(color: Color(0xFF848484))),
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 TextField(
                   obscureText: _obscureText,
                   controller: _enteredpassword,
                   decoration: InputDecoration(
                     labelText: 'Password',
-                    labelStyle: TextStyle(color: Color(0xFF848484)),
+                    labelStyle: const TextStyle(color: Color(0xFF848484)),
                     suffixIcon: IconButton(
                       onPressed: () {
                         setState(() {
@@ -101,7 +101,7 @@ class _LoginPageState extends State<LoginPage> {
                       },
                       icon: Icon(
                         _obscureText ? Icons.visibility_off : Icons.visibility,
-                        color: Color(0xFF848484),
+                        color: const Color(0xFF848484),
                       ),
                     ),
                   ),
@@ -111,7 +111,7 @@ class _LoginPageState extends State<LoginPage> {
                   children: [
                     TextButton(
                       onPressed: () {},
-                      child: Text(
+                      child: const Text(
                         'Forgot Password',
                         style:
                             TextStyle(color: Color(0xFF848484), fontSize: 14),
@@ -121,56 +121,56 @@ class _LoginPageState extends State<LoginPage> {
                 ),
                 ElevatedButton(
                   onPressed: _login,
-                  child: Text(
-                    'Login',
-                    style: TextStyle(color: Colors.white, fontSize: 14),
-                  ),
                   style: ElevatedButton.styleFrom(
-                    minimumSize: Size(358, 45),
-                    backgroundColor: Color(0xFF0083F5),
+                    minimumSize: const Size(358, 45),
+                    backgroundColor: const Color(0xFF0083F5),
                     shape: ContinuousRectangleBorder(
                       borderRadius: BorderRadius.circular(6.0),
                     ),
                   ),
+                  child: Text(
+                    'Login',
+                    style: TextStyle(color: Colors.white, fontSize: 14),
+                  ),
                 ),
-                SizedBox(height: 27),
+                const SizedBox(height: 27),
                 Row(
                   children: [
-                    Container(
+                    SizedBox(
                       width: 132.0,
-                      child: Divider(
+                      child: const Divider(
                         color: Color(0xFFE0E0E0),
                         thickness: 1,
                       ),
                     ),
-                    SizedBox(width: 20.0),
-                    Text(
+                    const SizedBox(width: 20.0),
+                    const Text(
                       'Or Login With',
                       style: TextStyle(color: Color(0xFF848484), fontSize: 14),
                     ),
-                    SizedBox(width: 20.0),
-                    Container(
+                    const SizedBox(width: 20.0),
+                    SizedBox(
                       width: 132.0,
-                      child: Divider(
+                      child: const Divider(
                         color: Color(0xFFE0E0E0),
                         thickness: 1,
                       ),
                     ),
                   ],
                 ),
-                SizedBox(height: 27),
+                const SizedBox(height: 27),
                 Row(
                   children: [
                     TextButton(
                       style: TextButton.styleFrom(
-                        minimumSize: Size(194.0, 45.0),
+                        minimumSize: const Size(194.0, 45.0),
                         shape: ContinuousRectangleBorder(
-                          side: BorderSide(color: Color(0xFFC1C1C1)),
+                          side: const BorderSide(color: Color(0xFFC1C1C1)),
                           borderRadius: BorderRadius.circular(6.0),
                         ),
                       ),
                       onPressed: () {},
-                      child: Row(
+                      child: const Row(
                         children: [
                           CircleAvatar(
                             backgroundImage:
@@ -186,17 +186,17 @@ class _LoginPageState extends State<LoginPage> {
                         ],
                       ),
                     ),
-                    SizedBox(width: 6),
+                    const SizedBox(width: 6),
                     TextButton(
                       style: TextButton.styleFrom(
-                        minimumSize: Size(194.0, 45.0),
+                        minimumSize: const Size(194.0, 45.0),
                         shape: ContinuousRectangleBorder(
-                          side: BorderSide(color: Color(0xFFC1C1C1)),
+                          side: const BorderSide(color: Color(0xFFC1C1C1)),
                           borderRadius: BorderRadius.circular(6.0),
                         ),
                       ),
                       onPressed: () {},
-                      child: Row(
+                      child: const Row(
                         children: [
                           CircleAvatar(
                             backgroundImage:
@@ -214,12 +214,12 @@ class _LoginPageState extends State<LoginPage> {
                     ),
                   ],
                 ),
-                SizedBox(height: 200), // Add a small height for spacing
+                const SizedBox(height: 200), // Add a small height for spacing
                 Container(
-                  padding: EdgeInsets.only(left: 90.0),
+                  padding: const EdgeInsets.only(left: 90.0),
                   child: Row(
                     children: [
-                      Text(
+                      const Text(
                         'Don’t have an account?',
                         style:
                             TextStyle(color: Color(0xFF848484), fontSize: 14),
@@ -229,11 +229,11 @@ class _LoginPageState extends State<LoginPage> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => SignupPage(),
+                              builder: (context) => const SignupPage(),
                             ),
                           );
                         },
-                        child: Text(
+                        child: const Text(
                           'Sign Up',
                           style:
                               TextStyle(color: Color(0xFF05518A), fontSize: 14),
